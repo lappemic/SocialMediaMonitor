@@ -5,6 +5,8 @@ Get the new articles of 20 minuten
 using their rss feed.
 Articles are considered as new if published after the last check date
 """
+
+new_func()
 # import dataiku
 import pandas as pd
 import numpy as np
