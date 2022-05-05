@@ -21,9 +21,9 @@ for entry in feed.entries:
     articles_to_keep.append(entry)
 print(f"New articles in feed since last check : {len(articles_to_keep)}")
 
-# Compute a Pandas dataframe to write into luzern-zeitung-initialdataset
+# Compute a Pandas dataframe to write into 20min initialdataset
 liverss_df = pd.DataFrame.from_dict(articles_to_keep, orient='columns')
 liverss_df['published'] = pd.to_datetime(liverss_df['published'])
 
 # Saving generated data to raw data folder
-liverss_df.to_csv(r'~/SocialMediaMonitor/data/raw/liverss_20min.csv', index = True)
+liverss_df.to_csv(r'~/SocialMediaMonitor/data/raw/liverss_20min.csv', index = False)
