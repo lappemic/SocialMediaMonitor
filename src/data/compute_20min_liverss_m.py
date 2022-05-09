@@ -13,7 +13,9 @@ url = 'https://partner-feeds.20min.ch/rss/20minuten/zentralschweiz'
 feed = feedparser.parse(url)
 print(f"Articles in feed : {len(feed.entries)}")
 
-# Computing the newly aquired articles -> not used up to now (04.05.2022)
+# Get last check date from global last_check_articles_20min
+
+# Computing the newly aquired articles
 articles_to_keep = []
 for entry in feed.entries:
     entry_date = pd.to_datetime(entry.published)
